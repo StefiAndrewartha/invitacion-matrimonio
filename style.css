@@ -1,0 +1,110 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: #fffaf6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffe4e1;
+  padding: 20px;
+}
+
+.fotos img {
+  width: 45%;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.contador {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.info {
+  padding: 20px;
+  background-color: #fff0f5;
+}
+
+footer {
+  background-color: #ffe4e1;
+  padding: 10px;
+}
+.mapa {
+    padding: 20px;
+  }
+  
+  .map-container {
+    max-width: 600px;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .confirmacion {
+    background: #fff8f0;
+    padding: 30px;
+  }
+  
+  .confirmacion form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .confirmacion input,
+  .confirmacion textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .confirmacion button {
+    background: #ffb6c1;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  #mensaje-enviado {
+    font-weight: bold;
+    font-size: 16px;
+    transition: opacity 0.3s;
+  }
+  .popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e8fff0;
+    color: #2e7d32;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    font-weight: bold;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  .popup.error {
+    background-color: #ffecec;
+    color: #d32f2f;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+        

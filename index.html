@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación de Matrimonio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>¡Nos casamos!</h1>
+    <h2>[Ximena] & [Stefi]</h2>
+  </header>
+
+  <section class="fotos">
+    <img src="images/nosotros1.jpg" alt="Nosotras disfrutando" />
+    <img src="images/nosotros2.jpg" alt="Abrazo con la Renatita" />
+    
+  </section>
+
+  <section class="contador">
+    <h3>Faltan:</h3>
+    <div id="countdown"></div>
+  </section>
+
+  <section class="info">
+    <p>Fecha: 12 de septiembre de 2025</p>
+    <p>Hora: 11:00 AM</p>
+    <p>Lugar: [Las Guias, Parcela 45, Lote 5. Isla de Maipo]</p>
+    <p><a href="https://milistadenovios.cl/enviar.php?id=26000" target="_blank">Ver lista de regalos</a></p>
+  </section>
+
+  <section class="mapa">
+    <h3>¿Cómo llegar?</h3>
+    <div class="map-container">
+      <iframe
+        "<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26543.00668229992!2d-70.9984585256836!3d-33.738026699999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96631dda77b8f599%3A0x64fbcd475555c49b!2sEl%20Rincon%20de%20la%20abuela!5e0!3m2!1ses!2scl!4v1744658566635!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+  
+  <footer>
+    <p>Con cariño, [Xime y Stefi]</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <section class="confirmacion">
+    <h3>Confirma tu asistencia</h3>
+    <form id="form-asistencia" action="https://formspree.io/f/xjkyzkqw" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo (opcional)" />
+        <textarea name="mensaje" placeholder="¿Vendrás solo o acompañado?"></textarea>
+        <button type="submit">Confirmar</button>
+      </form>
+      
+  
+      <div id="mensaje-popup" class="popup" style="display: none;">
+        <div class="popup-contenido" id="popup-mensaje-texto">
+          <!-- Aquí irá el mensaje -->
+        </div>
+      </div>
+      
+  </section>
+  
+  
+  
+</body>
+</html>
