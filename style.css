@@ -107,4 +107,20 @@ footer {
       transform: translateX(-50%) translateY(0);
     }
   }
-        
+  .whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #1DA851;
+  }
+          

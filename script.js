@@ -18,6 +18,13 @@ const x = setInterval(function () {
   }
 }, 1000);
 
+<a href="https://wa.me/?text=%C2%A1Te%20invitamos%20a%20nuestro%20matrimonio!%20%F0%9F%92%8D%20Mira%20aqu%C3%AD%3A%20https%3A%2F%2Fstefiandrewartha.github.io%2Finvitacion-matrimonio%2F" 
+   target="_blank" 
+   class="whatsapp-btn">
+   Compartir por WhatsApp
+</a>
+
+
 const form = document.getElementById("form-asistencia");
 const popup = document.getElementById("mensaje-popup");
 const popupTexto = document.getElementById("popup-mensaje-texto");
