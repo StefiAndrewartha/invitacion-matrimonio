@@ -1,87 +1,27 @@
-const countDownDate = new Date("Sep 12, 2025 11:00:00").getTime();
+// script.js
+document.addEventListener("DOMContentLoaded", function () {
+  const countdown = document.getElementById("countdown");
+  const targetDate = new Date("2025-09-12T11:00:00").getTime();
 
-const x = setInterval(function () {
-  const now = new Date().getTime();
-  const distance = countDownDate - now;
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    if (distance < 0) {
+      countdown.innerHTML = "¡Ya comenzó el gran día! 🎉";
+      return;
+    }
 
-  document.getElementById("countdown").innerHTML =
-    `${days} días ${hours}h ${minutes}m ${seconds}s`;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "¡Ya llegó el gran día!";
+    countdown.innerHTML = `${days} días ${hours} horas ${minutes} min ${seconds} seg`;
   }
-}, 1000);
 
-<a href="https://wa.me/?text=%C2%A1Te%20invitamos%20a%20nuestro%20matrimonio!%20%F0%9F%92%8D%20Mira%20aqu%C3%AD%3A%20https%3A%2F%2Fstefiandrewartha.github.io%2Finvitacion-matrimonio%2F" 
-   target="_blank" 
-   class="whatsapp-btn">
-   Compartir por WhatsApp
-</a>
-
-
-const form = document.getElementById("form-asistencia");
-const popup = document.getElementById("mensaje-popup");
-const popupTexto = document.getElementById("popup-mensaje-texto");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const data = {
-    nombre: form.nombre.value,
-    email: form.email.value,
-    mensaje: form.mensaje.value,
-  };
-
-  fetch(form.action, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => {
-      if (response.ok) {
-        enviarAGoogleSheets(data.nombre, data.email, data.mensaje);
-        form.reset();
-        mostrarPopup("¡Gracias por confirmar tu asistencia! 💌", false);
-      } else {
-        response.json().then((data) => {
-          mostrarPopup(data.error || "Ocurrió un error al enviar. Inténtalo nuevamente.", true);
-        });
-      }
-    })
-    .catch(() => {
-      mostrarPopup("Hubo un problema de red. Intenta más tarde.", true);
-    });
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 });
-
-function mostrarPopup(mensaje, esError) {
-  popupTexto.textContent = mensaje;
-  popup.classList.toggle("error", esError);
-  popup.style.display = "block";
-
-  setTimeout(() => {
-    popup.style.display = "none";
-  }, 5000);
-}
-
-function enviarAGoogleSheets(nombre, email, mensaje) {
-  const formData = new FormData();
-  formData.append("entry.22308715", nombre);
-  // Agrega estos campos si los has creado en tu Google Form:
-  // formData.append("entry.xxxxxxxx", email);
-  // formData.append("entry.xxxxxxxx", mensaje);
-
-  fetch("https://docs.google.com/forms/d/e/1FAIpQLSd4UYTz0P7Jpp-AUjWseFpbSNMlDAC2rVlNUkvO6acuIm_x7g/formResponse", {
-    method: "POST",
-    mode: "no-cors",
-    body: formData,
-  });
-}
