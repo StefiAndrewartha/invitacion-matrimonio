@@ -1,126 +1,117 @@
 body {
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  background: #fffaf6;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #fffaf7;
+  color: #4a2e2a;
+  line-height: 1.6;
+  text-align: center;
 }
 
 header {
-  background-color: #ffe4e1;
-  padding: 20px;
+  background-color: #ffe4ec;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  color: #d65a8a;
+}
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
 .fotos img {
-  width: 45%;
-  margin: 10px;
-  border-radius: 8px;
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .contador {
-  font-size: 24px;
-  margin: 20px 0;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.info {
-  padding: 20px;
+#countdown {
+  font-size: 2rem;
+  color: #bf2050;
+  margin-top: 1rem;
+}
+
+.info p {
+  margin: 0.5rem 0;
+}
+
+.mapa {
+  padding: 1rem;
   background-color: #fff0f5;
 }
 
-footer {
-  background-color: #ffe4e1;
-  padding: 10px;
+.direccion-mapa {
+  margin: 0.5rem 0 1rem;
+  font-weight: bold;
+  font-style: italic;
 }
-.mapa {
-    padding: 20px;
-  }
-  
-  .map-container {
-    max-width: 600px;
-    margin: auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  .confirmacion {
-    background: #fff8f0;
-    padding: 30px;
-  }
-  
-  .confirmacion form {
-    max-width: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .confirmacion input,
-  .confirmacion textarea {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-  }
-  
-  .confirmacion button {
-    background: #ffb6c1;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  #mensaje-enviado {
-    font-weight: bold;
-    font-size: 16px;
-    transition: opacity 0.3s;
-  }
-  .popup {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #e8fff0;
-    color: #2e7d32;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-    font-weight: bold;
-    animation: fadeIn 0.4s ease-in-out;
-  }
-  
-  .popup.error {
-    background-color: #ffecec;
-    color: #d32f2f;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(-50%) translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
-  }
-  .whatsapp-btn {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 30px;
-    font-size: 16px;
-    text-decoration: none;
-    margin-top: 20px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .whatsapp-btn:hover {
-    background-color: #1DA851;
-  }
-          
+
+.map-container {
+  max-width: 90%;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.regalos {
+  background-color: #fce4ec;
+  padding: 1rem;
+  margin: 2rem 1rem;
+  border: 2px dashed #d65a8a;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.regalos a {
+  color: #bf2050;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.confirmacion {
+  padding: 2rem 1rem;
+}
+
+.confirmacion input,
+.confirmacion textarea {
+  width: 90%;
+  max-width: 400px;
+  padding: 0.7rem;
+  margin: 0.5rem auto;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.confirmacion button {
+  background-color: #d65a8a;
+  color: white;
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #ffe4ec;
+}
